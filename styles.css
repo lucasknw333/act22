@@ -1,0 +1,65 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+}
+
+.carousel-item {
+    height: 65vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #ffcc00;
+}
+
+.btn-primary, .btn-info, .btn-success {
+    background-color: #ffcc00;
+    border: none;
+}
+
+.btn-primary:hover, .btn-info:hover, .btn-success:hover {
+    background-color: #ffc107;
+}
+
+.offcanvas {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.toast {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.toast-header {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffcc00;
+}

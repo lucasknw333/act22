@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomía</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Astronomía</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#carrusel">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tarjetas">Planetas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#collapse">Información</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="carrusel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="universo.jpg" class="d-block w-100" alt="Astronomía">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bienvenido al Mundo de la Astronomía</h5>
+                <p>Explora los misterios del universo.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="estrellas.jpg" class="d-block w-100" alt="Estrellas">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Descubre las Estrellas</h5>
+                <p>Aprende sobre las constelaciones y su significado.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="planetas.jpg" class="d-block w-100" alt="Planetas">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Los Planetas de Nuestro Sistema Solar</h5>
+                <p>Conoce las características de cada uno.</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<div class="container my-5" id="tarjetas">
+    <h2 class="text-center">Planetas del Sistema Solar</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Mercurio</h5>
+                    <p class="card-text">Mercurio es el planeta más cercano al Sol y el más pequeño del sistema solar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Venus</h5>
+                    <p class="card-text">Venus es el segundo planeta desde el Sol y es conocido por su brillo intenso.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Tierra</h5>
+                    <p class="card-text">La Tierra es el único planeta conocido que alberga vida, con una gran diversidad de ecosistemas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="text-center">Más Información</h2>
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#infoCollapse">Mostrar/ocultar información</button>
+    <div id="infoCollapse" class="collapse mt-3">
+        <div class="card card-body">
+            La astronomía es el estudio de los cuerpos celestes, incluyendo estrellas, planetas, cometas y galaxias. Este campo científico busca entender los fenómenos que ocurren más allá de la atmósfera terrestre, utilizando tanto observaciones como teorías físicas.
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvas" aria-labelledby="offCanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offCanvasLabel">Más sobre Astronomía</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        La astronomía estudia la composición, el movimiento y la evolución de los cuerpos celestes. Utiliza herramientas como telescopios y satélites para observar el cosmos, y se divide en varias ramas, incluyendo la astrofísica, la cosmología y la astrobiología.
+    </div>
+</div>
+<button class="btn btn-info" data-bs-toggle="offcanvas" data-bs-target="#offCanvas">Abrir Off Canvas</button>
+
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Notificación</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            ¡Bienvenido a la página de astronomía! Aquí podrás explorar el fascinante mundo de los cuerpos celestes.
+        </div>
+    </div>
+</div>
+<button class="btn btn-success" onclick="showToast()">Mostrar Toast</button>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showToast() {
+        $('.toast').toast({ autohide: true, delay: 3000 });
+        $('.toast').toast('show');
+    }
+</script>
+
+</body>
+</html>
